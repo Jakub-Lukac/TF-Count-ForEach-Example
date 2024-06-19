@@ -13,3 +13,7 @@ variable "admin_users" {
 variable "reader_users" {
   type = list(string)
 }
+
+variable "group_owners" {
+  type = list(string)
+}
