@@ -46,3 +46,18 @@ In our case, the reader members are accessed by object ID
 ```text
 azuread_group_member.readers[1]
 ```
+
+## Module
+
+Creating module to refactor the code (because previously the `group-admins.tf and group-readers.tf` files were almost identical).
+
+```text
+module "admins" {
+  source = "./modules/group-with-members"
+
+  # ./modules/group-with-members/variables
+  display_name = "${var.application_name}-${var.environment_name} Admins" # these variables refer to variable.tf outside the module
+  members      = var.admin_users
+  owners       = var.group_owners
+}
+```
