@@ -17,7 +17,7 @@ admin_users =
 
 ## count with list
 
-If we change content of the admin_users/reader_users list, when using list the changes wont take effect. Optionally, the resource may be destroyed and rebuilded, which is something we do not want as the resource may be binded to another resource .Terraform plan will output the following
+If we change content of the `admin_users/reader_users` list, when using list the changes wont take effect. Optionally, the resource may be destroyed and rebuilded, which is something we do not want as the resource may be binded to another resource .Terraform plan will output the following
 
 ```text
 Plan: 0 to add, 0 to change, 0 to destroy.
